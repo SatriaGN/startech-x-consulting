@@ -24,6 +24,9 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'corporate-green': 'hsl(var(--corporate-green))',
+				'corporate-blue': 'hsl(var(--corporate-blue))',
+				'corporate-dark': 'hsl(var(--corporate-dark))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -62,6 +65,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-corporate': 'var(--gradient-primary)',
+				'gradient-corporate-subtle': 'var(--gradient-secondary)',
+			},
+			boxShadow: {
+				'corporate': 'var(--shadow-corporate)',
+				'elegant': 'var(--shadow-elegant)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

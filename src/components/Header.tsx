@@ -23,10 +23,10 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="hover:text-opacity-80 transition-colors">Home</a>
-            <a href="#services" className="hover:text-opacity-80 transition-colors">Services</a>
-            <a href="#about" className="hover:text-opacity-80 transition-colors">About</a>
-            <a href="#contact" className="hover:text-opacity-80 transition-colors">Contact</a>
+            <a href="/" className="hover:text-opacity-80 transition-colors">Home</a>
+            <a href="/services" className="hover:text-opacity-80 transition-colors">Services</a>
+            <a href="/about" className="hover:text-opacity-80 transition-colors">About</a>
+            <a href="/contact" className="hover:text-opacity-80 transition-colors">Contact</a>
           </nav>
 
           {/* CTA Button */}
@@ -50,10 +50,10 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-white/20">
             <div className="flex flex-col space-y-4 pt-4">
-              <a href="#home" className="hover:text-opacity-80 transition-colors">Home</a>
-              <a href="#services" className="hover:text-opacity-80 transition-colors">Services</a>
-              <a href="#about" className="hover:text-opacity-80 transition-colors">About</a>
-              <a href="#contact" className="hover:text-opacity-80 transition-colors">Contact</a>
+              <a href="/" className="hover:text-opacity-80 transition-colors">Home</a>
+              <a href="/services" className="hover:text-opacity-80 transition-colors">Services</a>
+              <a href="/about" className="hover:text-opacity-80 transition-colors">About</a>
+              <a href="/contact" className="hover:text-opacity-80 transition-colors">Contact</a>
               <Button variant="secondary" size="lg" className="font-semibold mt-4">
                 Get Consultation
               </Button>

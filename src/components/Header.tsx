@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,10 +24,10 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="/" className="hover:text-opacity-80 transition-colors">Home</a>
-            <a href="/services" className="hover:text-opacity-80 transition-colors">Services</a>
-            <a href="/about" className="hover:text-opacity-80 transition-colors">About</a>
-            <a href="/contact" className="hover:text-opacity-80 transition-colors">Contact</a>
+            <Link to="/" className="hover:text-opacity-80 transition-colors">Home</Link>
+            <Link to="/services" className="hover:text-opacity-80 transition-colors">Services</Link>
+            <Link to="/about" className="hover:text-opacity-80 transition-colors">About</Link>
+            <Link to="/contact" className="hover:text-opacity-80 transition-colors">Contact</Link>
           </nav>
 
           {/* CTA Button */}
@@ -50,10 +51,10 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-white/20">
             <div className="flex flex-col space-y-4 pt-4">
-              <a href="/" className="hover:text-opacity-80 transition-colors">Home</a>
-              <a href="/services" className="hover:text-opacity-80 transition-colors">Services</a>
-              <a href="/about" className="hover:text-opacity-80 transition-colors">About</a>
-              <a href="/contact" className="hover:text-opacity-80 transition-colors">Contact</a>
+              <Link to="/" className="hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Home</Link>
+              <Link to="/services" className="hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Services</Link>
+              <Link to="/about" className="hover:text-opacity-80 transition-colors" onClick={toggleMenu}>About</Link>
+              <Link to="/contact" className="hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Contact</Link>
               <Button variant="secondary" size="lg" className="font-semibold mt-4">
                 Get Consultation
               </Button>

@@ -65,8 +65,26 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link to="/about" className="hover:text-corporate-green transition-colors duration-300 font-medium">About</Link>
-            <Link to="/contact" className="hover:text-corporate-green transition-colors duration-300 font-medium">Contact</Link>
+            <Link 
+              to="/about" 
+              className={`transition-all duration-300 font-medium px-3 py-2 rounded-lg ${
+                location.pathname === "/about" 
+                  ? 'bg-corporate-green text-white shadow-glow' 
+                  : 'hover:text-corporate-green hover:bg-white/10'
+              }`}
+            >
+              About
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`transition-all duration-300 font-medium px-3 py-2 rounded-lg ${
+                location.pathname === "/contact" 
+                  ? 'bg-corporate-green text-white shadow-glow' 
+                  : 'hover:text-corporate-green hover:bg-white/10'
+              }`}
+            >
+              Contact
+            </Link>
           </nav>
 
           {/* CTA Button */}

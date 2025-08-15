@@ -72,29 +72,29 @@ const Hero = () => {
             <div className="bg-gradient-corporate p-8 rounded-2xl shadow-elegant">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 space-y-4">
                 <div className="flex items-center justify-between text-white">
-                  <span className="text-sm font-medium">System Performance</span>
-                  <span className="text-green-300">+24% ↑</span>
+                  <span className="text-sm font-medium">Journal Success Rate</span>
+                  <span className="text-green-300">+18% ↑</span>
                 </div>
                 <div className="space-y-2">
                   <div className="flex justify-between text-white/80 text-sm">
-                    <span>CPU Usage</span>
-                    <span>42%</span>
+                    <span>Acceptance Rate</span>
+                    <span>87%</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
-                    <div className="bg-green-300 h-2 rounded-full w-[42%]"></div>
+                    <div className="bg-green-300 h-2 rounded-full w-[87%]"></div>
                   </div>
                 </div>
                 <div className="space-y-2">
                   <div className="flex justify-between text-white/80 text-sm">
-                    <span>Network Latency</span>
-                    <span>12ms</span>
+                    <span>Publications This Month</span>
+                    <span>23</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
-                    <div className="bg-blue-300 h-2 rounded-full w-[15%]"></div>
+                    <div className="bg-blue-300 h-2 rounded-full w-[76%]"></div>
                   </div>
                 </div>
                 <div className="pt-2 text-white/60 text-xs">
-                  Real-time monitoring dashboard
+                  Live publication tracking
                 </div>
               </div>
             </div>

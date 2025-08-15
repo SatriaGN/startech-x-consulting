@@ -7,10 +7,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Check if current route is one of the dropdown children
+  const isDropdownActive = location.pathname === "/" || location.pathname === "/services";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,7 +35,11 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center space-x-1 hover:text-corporate-green transition-colors duration-300 group">
+              <DropdownMenuTrigger className={`flex items-center space-x-1 transition-all duration-300 group px-3 py-2 rounded-lg ${
+                isDropdownActive 
+                  ? 'bg-corporate-green text-white shadow-glow' 
+                  : 'hover:text-corporate-green hover:bg-white/10'
+              }`}>
                 <span className="font-medium">menu1</span>
                 <ChevronDown size={16} className="transition-transform duration-200 group-data-[state=open]:rotate-180" />
               </DropdownMenuTrigger>

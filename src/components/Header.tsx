@@ -27,9 +27,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center">
-              <span className="text-corporate-green font-bold text-lg">S</span>
+              <span className="text-corporate-green font-bold text-lg">J</span>
             </div>
-            <span className="text-2xl font-bold">Startech-X</span>
+            <span className="text-2xl font-bold">Journal-X</span>
           </div>
 
           {/* Desktop Navigation */}

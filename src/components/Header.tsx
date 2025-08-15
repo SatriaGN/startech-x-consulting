@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -23,9 +29,21 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="hover:text-opacity-80 transition-colors">Home</Link>
-            <Link to="/services" className="hover:text-opacity-80 transition-colors">Services</Link>
+          <nav className="hidden md:flex items-center space-x-8">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 hover:text-opacity-80 transition-colors">
+                <span>menu1</span>
+                <ChevronDown size={16} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white text-gray-900">
+                <DropdownMenuItem asChild>
+                  <Link to="/" className="w-full">Home</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services" className="w-full">Services</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link to="/about" className="hover:text-opacity-80 transition-colors">About</Link>
             <Link to="/contact" className="hover:text-opacity-80 transition-colors">Contact</Link>
           </nav>
@@ -51,8 +69,13 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-white/20">
             <div className="flex flex-col space-y-4 pt-4">
-              <Link to="/" className="hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Home</Link>
-              <Link to="/services" className="hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Services</Link>
+              <div className="space-y-2">
+                <span className="text-white/80 text-sm font-medium">menu1</span>
+                <div className="pl-4 space-y-2">
+                  <Link to="/" className="block hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Home</Link>
+                  <Link to="/services" className="block hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Services</Link>
+                </div>
+              </div>
               <Link to="/about" className="hover:text-opacity-80 transition-colors" onClick={toggleMenu}>About</Link>
               <Link to="/contact" className="hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Contact</Link>
               <Button variant="secondary" size="lg" className="font-semibold mt-4">

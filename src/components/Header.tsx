@@ -106,20 +106,62 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-white/20">
-            <div className="flex flex-col space-y-4 pt-4">
-              <div className="space-y-2">
-                <span className="text-white/80 text-sm font-medium">menu1</span>
-                <div className="pl-4 space-y-2">
-                  <Link to="/" className="block hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Home</Link>
-                  <Link to="/services" className="block hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Services</Link>
+          <nav className="md:hidden mt-6 pb-6 border-t border-white/20">
+            <div className="flex flex-col space-y-3 pt-6">
+              <div className="space-y-3">
+                <span className="text-white/80 text-sm font-semibold uppercase tracking-wider">menu1</span>
+                <div className="pl-4 space-y-3">
+                  <Link 
+                    to="/" 
+                    className={`block py-2 px-3 rounded-lg transition-all duration-300 font-medium ${
+                      location.pathname === "/" 
+                        ? 'bg-corporate-green text-white shadow-glow' 
+                        : 'text-white/90 hover:text-white hover:bg-white/10'
+                    }`}
+                    onClick={toggleMenu}
+                  >
+                    🏠 Home
+                  </Link>
+                  <Link 
+                    to="/services" 
+                    className={`block py-2 px-3 rounded-lg transition-all duration-300 font-medium ${
+                      location.pathname === "/services" 
+                        ? 'bg-corporate-green text-white shadow-glow' 
+                        : 'text-white/90 hover:text-white hover:bg-white/10'
+                    }`}
+                    onClick={toggleMenu}
+                  >
+                    ⚙️ Services
+                  </Link>
                 </div>
               </div>
-              <Link to="/about" className="hover:text-opacity-80 transition-colors" onClick={toggleMenu}>About</Link>
-              <Link to="/contact" className="hover:text-opacity-80 transition-colors" onClick={toggleMenu}>Contact</Link>
-              <Button variant="secondary" size="lg" className="font-semibold mt-4">
-                Get Consultation
-              </Button>
+              <Link 
+                to="/about" 
+                className={`py-2 px-3 rounded-lg transition-all duration-300 font-medium ${
+                  location.pathname === "/about" 
+                    ? 'bg-corporate-green text-white shadow-glow' 
+                    : 'text-white/90 hover:text-white hover:bg-white/10'
+                }`}
+                onClick={toggleMenu}
+              >
+                About
+              </Link>
+              <Link 
+                to="/contact" 
+                className={`py-2 px-3 rounded-lg transition-all duration-300 font-medium ${
+                  location.pathname === "/contact" 
+                    ? 'bg-corporate-green text-white shadow-glow' 
+                    : 'text-white/90 hover:text-white hover:bg-white/10'
+                }`}
+                onClick={toggleMenu}
+              >
+                Contact
+              </Link>
+              <div className="pt-4 border-t border-white/10">
+                <Button variant="secondary" size="lg" className="w-full font-semibold">
+                  Get Consultation
+                </Button>
+              </div>
             </div>
           </nav>
         )}

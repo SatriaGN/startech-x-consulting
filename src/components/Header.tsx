@@ -31,21 +31,34 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center space-x-1 hover:text-opacity-80 transition-colors">
-                <span>menu1</span>
-                <ChevronDown size={16} />
+              <DropdownMenuTrigger className="flex items-center space-x-1 hover:text-corporate-green transition-colors duration-300 group">
+                <span className="font-medium">menu1</span>
+                <ChevronDown size={16} className="transition-transform duration-200 group-data-[state=open]:rotate-180" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white text-gray-900">
-                <DropdownMenuItem asChild>
-                  <Link to="/" className="w-full">Home</Link>
+              <DropdownMenuContent 
+                className="bg-white/95 backdrop-blur-sm border-0 shadow-elegant min-w-[200px] p-2" 
+                sideOffset={8}
+              >
+                <DropdownMenuItem asChild className="rounded-lg mb-1">
+                  <Link 
+                    to="/" 
+                    className="w-full px-4 py-3 text-gray-700 hover:bg-gradient-corporate hover:text-white transition-all duration-300 rounded-lg font-medium"
+                  >
+                    🏠 Home
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/services" className="w-full">Services</Link>
+                <DropdownMenuItem asChild className="rounded-lg">
+                  <Link 
+                    to="/services" 
+                    className="w-full px-4 py-3 text-gray-700 hover:bg-gradient-corporate hover:text-white transition-all duration-300 rounded-lg font-medium"
+                  >
+                    ⚙️ Services
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link to="/about" className="hover:text-opacity-80 transition-colors">About</Link>
-            <Link to="/contact" className="hover:text-opacity-80 transition-colors">Contact</Link>
+            <Link to="/about" className="hover:text-corporate-green transition-colors duration-300 font-medium">About</Link>
+            <Link to="/contact" className="hover:text-corporate-green transition-colors duration-300 font-medium">Contact</Link>
           </nav>
 
           {/* CTA Button */}
